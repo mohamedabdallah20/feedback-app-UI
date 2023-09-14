@@ -1,29 +1,18 @@
-function App() {
-  const title = 'blog-app'
-  const body = 'blog-app body'
-  const comments = [
-    { name: 'comment1', id: 1 },
-    { name: 'comment2', id: 2 },
-    { name: 'comment3', id: 3 },
-  ]
-  const showComments = true
-  const commentsBlock = (
-    <div className="comment">
-      <h3>Comments ({comments.length})</h3>
-      <ul>
-        {comments.map((comment, index) => (
-          <li key={index}>{comment.name}</li>
-        ))}
-      </ul>
-    </div>
-  )
-  return (
-    <div className="container">
-      <h1>{title.toUpperCase()}</h1>
-      <p>{body}</p>
+import Header from './components/Header'
+// import FeedbackItem from './components/FeedbackItem'
+import { useState } from 'react'
+import FeedbackList from './components/FeedbackList'
+import FeedbackData from './data/feedbackData'
 
-      {showComments && commentsBlock}
-    </div>
+function App() {
+  const [feedback, setFeedback] = useState(FeedbackData)
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <FeedbackList feedback={feedback} />
+      </div>
+    </>
   )
 }
 export default App
