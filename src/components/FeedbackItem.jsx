@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
 // import { PropTypes } from 'react'
 import Card from './shared/Card'
 function FeedbackItem({ item, deleteHandler }) {
@@ -7,7 +8,7 @@ function FeedbackItem({ item, deleteHandler }) {
       <div className="num-display">{item.rating}</div>
 
       <button className="close" onClick={() => deleteHandler(item.id)}>
-        delete
+        <FaTimes color="purple" />
       </button>
 
       <div className="text-display">{item.text}</div>

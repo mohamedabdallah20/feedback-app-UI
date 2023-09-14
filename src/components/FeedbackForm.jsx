@@ -26,7 +26,7 @@ function FeedbackForm({ addHandler }) {
     e.preventDefault()
     if (text.trim().length > 10) {
       const newFeedback = {
-        id: Math.random().toString(),
+        // id: Math.random().toString(),
         text,
         rating: Number(rating),
       }
