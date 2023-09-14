@@ -2,7 +2,7 @@ const feedbackData = [
   {
     id: 1,
     text: 'feedback 1',
-    rating: 1,
+    rating: 2,
   },
   {
     id: 2,
