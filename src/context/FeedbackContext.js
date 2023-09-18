@@ -1,7 +1,5 @@
 import { createContext, useState, useEffect } from 'react'
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid'
-// import feedbackData from '../data/feedbackData'
 
 const FeedbackContext = createContext()
 
@@ -41,9 +39,16 @@ export const FeedbackProvider = ({ children }) => {
     }
   }
   // add feedback
-  const addHandler = (newFeedback) => {
-    newFeedback.id = uuidv4()
-    setFeedback([newFeedback, ...feedback])
+  const addHandler = async (newFeedback) => {
+    const res = await fetch(`/feedback`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newFeedback),
+    })
+    const data = await res.json()
+    setFeedback([data, ...feedback])
   }
   // set item to be updated
   const editHandler = (item) => {
