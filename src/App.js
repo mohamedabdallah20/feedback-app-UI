@@ -6,7 +6,7 @@ import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import AboutPage from './Pages/AboutPage'
 import AboutIconLink from './components/AboutIconLink'
-import HammoPage from './Pages/HammoPage'
+// import HammoPage from './Pages/HammoPage'
 // import HammoLink from './components/HammoLink'
 import { FeedbackProvider } from './context/FeedbackContext'
 
