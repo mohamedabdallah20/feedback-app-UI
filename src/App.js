@@ -29,7 +29,7 @@ function App() {
               }
             ></Route>
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/hammo" element={<HammoPage />} />
+            {/* <Route path="/hammo" element={<HammoPage />} /> */}
           </Routes>
           <AboutIconLink />
           {/* <HammoLink /> */}
