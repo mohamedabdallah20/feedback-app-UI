@@ -17,6 +17,10 @@ export const FeedbackProvider = ({ children }) => {
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...newItem } : item))
     )
+    setFeedbackEdit({
+      item: {},
+      edit: false,
+    })
   }
   // delete feedback
   const deleteHandler = (id) => {

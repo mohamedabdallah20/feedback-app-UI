@@ -44,6 +44,7 @@ function FeedbackForm() {
       }
       if (feedbackEdit.edit === true) {
         updateHandler(feedbackEdit.item.id, newFeedback)
+        setText('')
       } else {
         addHandler(newFeedback)
         setText('')
